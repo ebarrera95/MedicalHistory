@@ -17,6 +17,7 @@ class MainCoordinator: Coordinator {
         self.window = window
         self.navigationController = UINavigationController()
         
+        navigationController.navigationBar.prefersLargeTitles = true
     }
     
     func start() {

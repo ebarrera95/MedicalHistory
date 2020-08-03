@@ -11,14 +11,20 @@ import UIKit
 class HomeViewController: UIViewController {
     
     weak var coordinator: HomeCoordinator?
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
+    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    var homeDataSource: HomeDataSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         customiseNavigationBar()
         view.addSubview(collectionView)
-        collectionView.backgroundColor = .white
+        
+        homeDataSource = HomeDataSource(patients: [
+            Patient(name: .init(fistName: "Reina", middleName: "Caridad", lastName: "Alvarez"), age: 65, address: "", telephone: "", principalCarerAndRelationship: "")
+        ])
+        
+        homeDataSource?.collectionView = collectionView
     }
     
     override func viewDidLayoutSubviews() {
@@ -26,6 +32,6 @@ class HomeViewController: UIViewController {
     }
     
     func customiseNavigationBar() {
-        navigationItem.title = "Patients"
+        navigationItem.title = "Medical Histories"
     }
 }
