@@ -9,9 +9,17 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    weak var coordinator: HomeCoordinator?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
+        customiseNavigationBar()
     }
-
+    
+    func customiseNavigationBar() {
+        navigationItem.title = "Patients"
+    }
 }
