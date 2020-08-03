@@ -34,7 +34,7 @@
 		05110AE424D7EBDE00C604C3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		05110AE724D7EC8200C604C3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		05110AE924D7FBFB00C604C3 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		05110AEC24D8043700C604C3 /* PatientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PatientCell.swift; path = MedicalHistory/PatientCell.swift; sourceTree = SOURCE_ROOT; };
+		05110AEC24D8043700C604C3 /* PatientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PatientCell.swift; path = MedicalHistory/ViewControllers/ReusableViews/PatientCell.swift; sourceTree = SOURCE_ROOT; };
 		05110AEE24D8047500C604C3 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		05110AF024D8091800C604C3 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		05110AF224D80FDB00C604C3 /* PatientsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsHeader.swift; sourceTree = "<group>"; };
@@ -73,10 +73,9 @@
 				05110ACA24D7E2A200C604C3 /* AppDelegate.swift */,
 				05110ACC24D7E2A200C604C3 /* SceneDelegate.swift */,
 				05110AE624D7EBF100C604C3 /* Coordinators */,
-				05110AEC24D8043700C604C3 /* PatientCell.swift */,
-				05110AEE24D8047500C604C3 /* Patient.swift */,
-				05110AF224D80FDB00C604C3 /* PatientsHeader.swift */,
 				05110AEB24D8022600C604C3 /* ViewControllers */,
+				05110AF724D815F500C604C3 /* ReusableViews */,
+				05110AF624D815CB00C604C3 /* Model */,
 				05110AD324D7E2A400C604C3 /* Assets.xcassets */,
 				05110AD524D7E2A400C604C3 /* LaunchScreen.storyboard */,
 				05110AE224D7E98F00C604C3 /* Main.storyboard */,
@@ -102,6 +101,23 @@
 				05110AF024D8091800C604C3 /* HomeDataSource.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		05110AF624D815CB00C604C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05110AEE24D8047500C604C3 /* Patient.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		05110AF724D815F500C604C3 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				05110AEC24D8043700C604C3 /* PatientCell.swift */,
+				05110AF224D80FDB00C604C3 /* PatientsHeader.swift */,
+			);
+			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

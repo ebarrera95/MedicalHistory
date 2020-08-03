@@ -46,8 +46,6 @@ class HomeDataSource: NSObject, UICollectionViewDataSource {
         default:
             assert(false, "unexpected element")
         }
-        
-        
     }
 }
 
