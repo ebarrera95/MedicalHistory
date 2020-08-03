@@ -65,7 +65,7 @@
 				05110ACA24D7E2A200C604C3 /* AppDelegate.swift */,
 				05110ACC24D7E2A200C604C3 /* SceneDelegate.swift */,
 				05110AE624D7EBF100C604C3 /* Coordinators */,
-				05110ADE24D7E62500C604C3 /* HomeViewController.swift */,
+				05110AEB24D8022600C604C3 /* ViewControllers */,
 				05110AD324D7E2A400C604C3 /* Assets.xcassets */,
 				05110AD524D7E2A400C604C3 /* LaunchScreen.storyboard */,
 				05110AE224D7E98F00C604C3 /* Main.storyboard */,
@@ -82,6 +82,14 @@
 				05110AE924D7FBFB00C604C3 /* HomeCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		05110AEB24D8022600C604C3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				05110ADE24D7E62500C604C3 /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
