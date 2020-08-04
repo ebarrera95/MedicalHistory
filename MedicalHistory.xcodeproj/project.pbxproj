@@ -21,6 +21,8 @@
 		05110AF124D8091800C604C3 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05110AF024D8091800C604C3 /* HomeDataSource.swift */; };
 		05110AF324D80FDB00C604C3 /* PatientsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05110AF224D80FDB00C604C3 /* PatientsHeader.swift */; };
 		0586FDF324D9451A0001AE8D /* UIColour+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0586FDF224D9451A0001AE8D /* UIColour+.swift */; };
+		05C5236224D94B1A006D8A34 /* NewPatientCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5236124D94B1A006D8A34 /* NewPatientCoordinator.swift */; };
+		05C5236424D94BBF006D8A34 /* NewPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5236324D94BBF006D8A34 /* NewPatientViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		05110AF024D8091800C604C3 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		05110AF224D80FDB00C604C3 /* PatientsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsHeader.swift; sourceTree = "<group>"; };
 		0586FDF224D9451A0001AE8D /* UIColour+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColour+.swift"; sourceTree = "<group>"; };
+		05C5236124D94B1A006D8A34 /* NewPatientCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPatientCoordinator.swift; sourceTree = "<group>"; };
+		05C5236324D94BBF006D8A34 /* NewPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPatientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				05110AE424D7EBDE00C604C3 /* Coordinator.swift */,
+				05C5236124D94B1A006D8A34 /* NewPatientCoordinator.swift */,
 				05110AE724D7EC8200C604C3 /* MainCoordinator.swift */,
 				05110AE924D7FBFB00C604C3 /* HomeCoordinator.swift */,
 			);
@@ -101,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				05110ADE24D7E62500C604C3 /* HomeViewController.swift */,
+				05C5236324D94BBF006D8A34 /* NewPatientViewController.swift */,
 				05110AF024D8091800C604C3 /* HomeDataSource.swift */,
 			);
 			path = ViewControllers;
@@ -199,8 +205,10 @@
 				05110AF324D80FDB00C604C3 /* PatientsHeader.swift in Sources */,
 				05110ACB24D7E2A200C604C3 /* AppDelegate.swift in Sources */,
 				05110ACD24D7E2A200C604C3 /* SceneDelegate.swift in Sources */,
+				05C5236224D94B1A006D8A34 /* NewPatientCoordinator.swift in Sources */,
 				05110AE824D7EC8200C604C3 /* MainCoordinator.swift in Sources */,
 				05110AEF24D8047500C604C3 /* Patient.swift in Sources */,
+				05C5236424D94BBF006D8A34 /* NewPatientViewController.swift in Sources */,
 				0586FDF324D9451A0001AE8D /* UIColour+.swift in Sources */,
 				05110ADF24D7E62500C604C3 /* HomeViewController.swift in Sources */,
 				05110AF124D8091800C604C3 /* HomeDataSource.swift in Sources */,

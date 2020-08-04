@@ -10,7 +10,9 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    weak var coordinator: HomeCoordinator?
+    //TODO: See why this variable cannot be weak
+    var coordinator: HomeCoordinator?
+    
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     var homeDataSource: HomeDataSource?
     
@@ -34,6 +36,8 @@ class HomeViewController: UIViewController {
             addPatientButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
             addPatientButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -44)
         ])
+        addPatientButton.addTarget(self, action: #selector(newPatientForm), for: .touchUpInside)
+        
         
         homeDataSource = HomeDataSource(patients: [
             Patient(name: .init(fistName: "Reina", middleName: "Caridad", lastName: "Alvarez"), age: 65, address: "", telephone: "", principalCarerAndRelationship: "")
@@ -46,7 +50,11 @@ class HomeViewController: UIViewController {
         collectionView.frame = view.bounds
     }
     
-    func customiseNavigationBar() {
+    @objc private func newPatientForm() {
+        coordinator?.presentNewPatientForm()
+    }
+    
+    private func customiseNavigationBar() {
         navigationItem.title = "Medical Histories"
     }
 }

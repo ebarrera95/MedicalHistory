@@ -18,6 +18,14 @@ class HomeCoordinator: Coordinator {
     }
     
     func start() {
-        navigationController.pushViewController(HomeViewController(), animated: true)
+        let homeVC = HomeViewController()
+        homeVC.coordinator = self
+        navigationController.pushViewController(homeVC, animated: true)
+    }
+    
+    func presentNewPatientForm() {
+        let newPatientCoordinator = NewPatientCoordinator(navigationController: self.navigationController)
+        childCoordinator.append(newPatientCoordinator)
+        newPatientCoordinator.start()
     }
 }
