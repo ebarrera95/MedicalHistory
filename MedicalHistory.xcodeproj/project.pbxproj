@@ -20,6 +20,7 @@
 		05110AEF24D8047500C604C3 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05110AEE24D8047500C604C3 /* Patient.swift */; };
 		05110AF124D8091800C604C3 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05110AF024D8091800C604C3 /* HomeDataSource.swift */; };
 		05110AF324D80FDB00C604C3 /* PatientsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05110AF224D80FDB00C604C3 /* PatientsHeader.swift */; };
+		0586FDF124D935E40001AE8D /* UIColour+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0586FDF024D935E40001AE8D /* UIColour+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		05110AEE24D8047500C604C3 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		05110AF024D8091800C604C3 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		05110AF224D80FDB00C604C3 /* PatientsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsHeader.swift; sourceTree = "<group>"; };
+		0586FDF024D935E40001AE8D /* UIColour+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColour+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				05110ACC24D7E2A200C604C3 /* SceneDelegate.swift */,
 				05110AE624D7EBF100C604C3 /* Coordinators */,
 				05110AEB24D8022600C604C3 /* ViewControllers */,
+				0586FDF024D935E40001AE8D /* UIColour+.swift */,
 				05110AF724D815F500C604C3 /* ReusableViews */,
 				05110AF624D815CB00C604C3 /* Model */,
 				05110AD324D7E2A400C604C3 /* Assets.xcassets */,
@@ -198,6 +201,7 @@
 				05110ACD24D7E2A200C604C3 /* SceneDelegate.swift in Sources */,
 				05110AE824D7EC8200C604C3 /* MainCoordinator.swift in Sources */,
 				05110AEF24D8047500C604C3 /* Patient.swift in Sources */,
+				0586FDF124D935E40001AE8D /* UIColour+.swift in Sources */,
 				05110ADF24D7E62500C604C3 /* HomeViewController.swift in Sources */,
 				05110AF124D8091800C604C3 /* HomeDataSource.swift in Sources */,
 				05110AEA24D7FBFB00C604C3 /* HomeCoordinator.swift in Sources */,
