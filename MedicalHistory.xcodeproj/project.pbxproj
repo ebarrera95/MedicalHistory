@@ -34,7 +34,7 @@
 		05110AE424D7EBDE00C604C3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		05110AE724D7EC8200C604C3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		05110AE924D7FBFB00C604C3 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		05110AEC24D8043700C604C3 /* PatientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PatientCell.swift; path = MedicalHistory/ViewControllers/ReusableViews/PatientCell.swift; sourceTree = SOURCE_ROOT; };
+		05110AEC24D8043700C604C3 /* PatientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PatientCell.swift; path = MedicalHistory/ReusableViews/PatientCell.swift; sourceTree = SOURCE_ROOT; };
 		05110AEE24D8047500C604C3 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		05110AF024D8091800C604C3 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		05110AF224D80FDB00C604C3 /* PatientsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsHeader.swift; sourceTree = "<group>"; };
