@@ -17,10 +17,13 @@ class PatientNameCell: UICollectionViewCell {
             guard let cellType = nameCellType else { fatalError() }
             switch cellType {
             case .fistName:
+                nameTextField.textContentType = .givenName
                 nameTextField.attributedPlaceholder = NSAttributedString(string: "Fist Name")
             case .middleName:
+                nameTextField.textContentType = .middleName
                 nameTextField.attributedPlaceholder = NSAttributedString(string: "Middle Name")
             case .lastName:
+                nameTextField.textContentType = .familyName
                 nameTextField.attributedPlaceholder = NSAttributedString(string: "Last Name")
             }
         }
@@ -62,6 +65,10 @@ class PatientNameCell: UICollectionViewCell {
             bottomLine.leadingAnchor.constraint(equalTo: nameTextField.leadingAnchor)
         ])
     }
+}
+
+extension PatientNameCell: UITextFieldDelegate {
+    
 }
 
 enum PatientNameType: CaseIterable {
