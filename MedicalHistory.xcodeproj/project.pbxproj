@@ -23,6 +23,8 @@
 		0586FDF324D9451A0001AE8D /* UIColour+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0586FDF224D9451A0001AE8D /* UIColour+.swift */; };
 		05C5236224D94B1A006D8A34 /* NewPatientCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5236124D94B1A006D8A34 /* NewPatientCoordinator.swift */; };
 		05C5236424D94BBF006D8A34 /* NewPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5236324D94BBF006D8A34 /* NewPatientViewController.swift */; };
+		05C5236624DA8C68006D8A34 /* PatientNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5236524DA8C68006D8A34 /* PatientNameCell.swift */; };
+		05C5236824DA9142006D8A34 /* NewPatientDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5236724DA9142006D8A34 /* NewPatientDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		0586FDF224D9451A0001AE8D /* UIColour+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColour+.swift"; sourceTree = "<group>"; };
 		05C5236124D94B1A006D8A34 /* NewPatientCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPatientCoordinator.swift; sourceTree = "<group>"; };
 		05C5236324D94BBF006D8A34 /* NewPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPatientViewController.swift; sourceTree = "<group>"; };
+		05C5236524DA8C68006D8A34 /* PatientNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientNameCell.swift; sourceTree = "<group>"; };
+		05C5236724DA9142006D8A34 /* NewPatientDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPatientDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			children = (
 				05110ADE24D7E62500C604C3 /* HomeViewController.swift */,
 				05C5236324D94BBF006D8A34 /* NewPatientViewController.swift */,
+				05C5236724DA9142006D8A34 /* NewPatientDataSource.swift */,
 				05110AF024D8091800C604C3 /* HomeDataSource.swift */,
 			);
 			path = ViewControllers;
@@ -124,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				05110AEC24D8043700C604C3 /* PatientCell.swift */,
+				05C5236524DA8C68006D8A34 /* PatientNameCell.swift */,
 				05110AF224D80FDB00C604C3 /* PatientsHeader.swift */,
 			);
 			path = ReusableViews;
@@ -208,10 +214,12 @@
 				05C5236224D94B1A006D8A34 /* NewPatientCoordinator.swift in Sources */,
 				05110AE824D7EC8200C604C3 /* MainCoordinator.swift in Sources */,
 				05110AEF24D8047500C604C3 /* Patient.swift in Sources */,
+				05C5236824DA9142006D8A34 /* NewPatientDataSource.swift in Sources */,
 				05C5236424D94BBF006D8A34 /* NewPatientViewController.swift in Sources */,
 				0586FDF324D9451A0001AE8D /* UIColour+.swift in Sources */,
 				05110ADF24D7E62500C604C3 /* HomeViewController.swift in Sources */,
 				05110AF124D8091800C604C3 /* HomeDataSource.swift in Sources */,
+				05C5236624DA8C68006D8A34 /* PatientNameCell.swift in Sources */,
 				05110AEA24D7FBFB00C604C3 /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
