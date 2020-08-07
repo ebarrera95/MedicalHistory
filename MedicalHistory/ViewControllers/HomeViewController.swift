@@ -39,9 +39,7 @@ class HomeViewController: UIViewController {
         addPatientButton.addTarget(self, action: #selector(newPatientForm), for: .touchUpInside)
         
         
-        homeDataSource = HomeDataSource(patients: [
-            Patient(name: .init(fistName: "Reina", middleName: "Caridad", lastName: "Alvarez"), age: 65, address: "", telephone: "", principalCarerAndRelationship: "")
-        ])
+        homeDataSource = HomeDataSource(patients: [])
         
         homeDataSource?.collectionView = collectionView
     }

@@ -25,6 +25,11 @@
 		05C5236424D94BBF006D8A34 /* NewPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5236324D94BBF006D8A34 /* NewPatientViewController.swift */; };
 		05C5236624DA8C68006D8A34 /* PatientNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5236524DA8C68006D8A34 /* PatientNameCell.swift */; };
 		05C5236824DA9142006D8A34 /* NewPatientDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5236724DA9142006D8A34 /* NewPatientDataSource.swift */; };
+		05C5236A24DAA1F7006D8A34 /* PhysicalExamination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5236924DAA1F7006D8A34 /* PhysicalExamination.swift */; };
+		05C5236C24DAA933006D8A34 /* PastMedicalHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5236B24DAA933006D8A34 /* PastMedicalHistory.swift */; };
+		05C5236E24DD4892006D8A34 /* MedicalHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5236D24DD4892006D8A34 /* MedicalHistory.swift */; };
+		05C5237024DD4A08006D8A34 /* PatientReevaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5236F24DD4A08006D8A34 /* PatientReevaluation.swift */; };
+		05C5237224DD4A9F006D8A34 /* Disciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5237124DD4A9F006D8A34 /* Disciple.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,11 @@
 		05C5236324D94BBF006D8A34 /* NewPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPatientViewController.swift; sourceTree = "<group>"; };
 		05C5236524DA8C68006D8A34 /* PatientNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientNameCell.swift; sourceTree = "<group>"; };
 		05C5236724DA9142006D8A34 /* NewPatientDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPatientDataSource.swift; sourceTree = "<group>"; };
+		05C5236924DAA1F7006D8A34 /* PhysicalExamination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalExamination.swift; sourceTree = "<group>"; };
+		05C5236B24DAA933006D8A34 /* PastMedicalHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastMedicalHistory.swift; sourceTree = "<group>"; };
+		05C5236D24DD4892006D8A34 /* MedicalHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalHistory.swift; sourceTree = "<group>"; };
+		05C5236F24DD4A08006D8A34 /* PatientReevaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientReevaluation.swift; sourceTree = "<group>"; };
+		05C5237124DD4A9F006D8A34 /* Disciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disciple.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +131,11 @@
 			isa = PBXGroup;
 			children = (
 				05110AEE24D8047500C604C3 /* Patient.swift */,
+				05C5236D24DD4892006D8A34 /* MedicalHistory.swift */,
+				05C5236F24DD4A08006D8A34 /* PatientReevaluation.swift */,
+				05C5237124DD4A9F006D8A34 /* Disciple.swift */,
+				05C5236B24DAA933006D8A34 /* PastMedicalHistory.swift */,
+				05C5236924DAA1F7006D8A34 /* PhysicalExamination.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,7 +226,10 @@
 				05110AF324D80FDB00C604C3 /* PatientsHeader.swift in Sources */,
 				05110ACB24D7E2A200C604C3 /* AppDelegate.swift in Sources */,
 				05110ACD24D7E2A200C604C3 /* SceneDelegate.swift in Sources */,
+				05C5237024DD4A08006D8A34 /* PatientReevaluation.swift in Sources */,
+				05C5237224DD4A9F006D8A34 /* Disciple.swift in Sources */,
 				05C5236224D94B1A006D8A34 /* NewPatientCoordinator.swift in Sources */,
+				05C5236E24DD4892006D8A34 /* MedicalHistory.swift in Sources */,
 				05110AE824D7EC8200C604C3 /* MainCoordinator.swift in Sources */,
 				05110AEF24D8047500C604C3 /* Patient.swift in Sources */,
 				05C5236824DA9142006D8A34 /* NewPatientDataSource.swift in Sources */,
@@ -220,6 +238,8 @@
 				05110ADF24D7E62500C604C3 /* HomeViewController.swift in Sources */,
 				05110AF124D8091800C604C3 /* HomeDataSource.swift in Sources */,
 				05C5236624DA8C68006D8A34 /* PatientNameCell.swift in Sources */,
+				05C5236C24DAA933006D8A34 /* PastMedicalHistory.swift in Sources */,
+				05C5236A24DAA1F7006D8A34 /* PhysicalExamination.swift in Sources */,
 				05110AEA24D7FBFB00C604C3 /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

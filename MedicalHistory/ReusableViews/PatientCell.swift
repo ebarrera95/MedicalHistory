@@ -12,7 +12,7 @@ class PatientCell: UICollectionViewCell {
     
     static var reuseIdentifier = "PatientCell"
     
-    var patientName: Patient.PatientName? {
+    var patientName: Patient.Name? {
         didSet {
             guard let name = patientName else { fatalError() }
             let stringName = name.fistName + " " + name.middleName + " " + name.lastName
