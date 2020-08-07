@@ -15,5 +15,5 @@ enum Disciple {
 
 struct DiscipleshipMovement {
     let date: Date
-    let observations: String
+    let observation: String
 }

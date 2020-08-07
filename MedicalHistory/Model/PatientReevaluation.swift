@@ -10,5 +10,5 @@ import Foundation
 
 struct PatientReevaluation {
     let date: Date
-    let observations: String
+    let observation: String
 }
