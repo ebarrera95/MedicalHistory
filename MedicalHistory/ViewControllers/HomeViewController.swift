@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     //TODO: See why this variable cannot be weak
     var coordinator: HomeCoordinator?
     
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    let patientListCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     var homeDataSource: HomeDataSource?
     
     private let addPatientButton: UIButton = {
@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         customiseNavigationBar()
-        view.addSubview(collectionView)
+        view.addSubview(patientListCollectionView)
         view.addSubview(addPatientButton)
         
         addPatientButton.translatesAutoresizingMaskIntoConstraints = false
@@ -41,11 +41,11 @@ class HomeViewController: UIViewController {
         
         homeDataSource = HomeDataSource(patients: [])
         
-        homeDataSource?.collectionView = collectionView
+        homeDataSource?.collectionView = patientListCollectionView
     }
     
     override func viewDidLayoutSubviews() {
-        collectionView.frame = view.bounds
+        patientListCollectionView.frame = view.bounds
     }
     
     @objc private func newPatientForm() {
