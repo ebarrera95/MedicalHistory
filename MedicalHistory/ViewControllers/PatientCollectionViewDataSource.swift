@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeDataSource: NSObject, UICollectionViewDataSource {
+class PatientCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
     var patients: [Patient]
     
@@ -49,7 +49,7 @@ class HomeDataSource: NSObject, UICollectionViewDataSource {
     }
 }
 
-extension HomeDataSource: UICollectionViewDelegateFlowLayout {
+extension PatientCollectionViewDataSource: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 44)
     }

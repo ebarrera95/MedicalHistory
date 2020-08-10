@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     var coordinator: HomeCoordinator?
     
     let patientListCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-    var homeDataSource: HomeDataSource?
+    var homeDataSource: PatientCollectionViewDataSource?
     
     private let addPatientButton: UIButton = {
         let button = UIButton()
@@ -39,7 +39,7 @@ class HomeViewController: UIViewController {
         addPatientButton.addTarget(self, action: #selector(newPatientForm), for: .touchUpInside)
         
         
-        homeDataSource = HomeDataSource(patients: [])
+        homeDataSource = PatientCollectionViewDataSource(patients: [])
         
         homeDataSource?.collectionView = patientListCollectionView
     }
