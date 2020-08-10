@@ -18,7 +18,7 @@
 		05110AEA24D7FBFB00C604C3 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05110AE924D7FBFB00C604C3 /* HomeCoordinator.swift */; };
 		05110AED24D8043700C604C3 /* PatientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05110AEC24D8043700C604C3 /* PatientCell.swift */; };
 		05110AEF24D8047500C604C3 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05110AEE24D8047500C604C3 /* Patient.swift */; };
-		05110AF124D8091800C604C3 /* PatientCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05110AF024D8091800C604C3 /* PatientCollectionViewDataSource.swift */; };
+		05110AF124D8091800C604C3 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05110AF024D8091800C604C3 /* HomeDataSource.swift */; };
 		05110AF324D80FDB00C604C3 /* PatientsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05110AF224D80FDB00C604C3 /* PatientsHeader.swift */; };
 		0586FDF324D9451A0001AE8D /* UIColour+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0586FDF224D9451A0001AE8D /* UIColour+.swift */; };
 		05C5236224D94B1A006D8A34 /* NewPatientCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5236124D94B1A006D8A34 /* NewPatientCoordinator.swift */; };
@@ -46,7 +46,7 @@
 		05110AE924D7FBFB00C604C3 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		05110AEC24D8043700C604C3 /* PatientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PatientCell.swift; path = MedicalHistory/ReusableViews/PatientCell.swift; sourceTree = SOURCE_ROOT; };
 		05110AEE24D8047500C604C3 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
-		05110AF024D8091800C604C3 /* PatientCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		05110AF024D8091800C604C3 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		05110AF224D80FDB00C604C3 /* PatientsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsHeader.swift; sourceTree = "<group>"; };
 		0586FDF224D9451A0001AE8D /* UIColour+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColour+.swift"; sourceTree = "<group>"; };
 		05C5236124D94B1A006D8A34 /* NewPatientCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPatientCoordinator.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 				05110ADE24D7E62500C604C3 /* HomeViewController.swift */,
 				05C5236324D94BBF006D8A34 /* NewPatientViewController.swift */,
 				05C5236724DA9142006D8A34 /* NewPatientDataSource.swift */,
-				05110AF024D8091800C604C3 /* PatientCollectionViewDataSource.swift */,
+				05110AF024D8091800C604C3 /* HomeDataSource.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -236,7 +236,7 @@
 				05C5236424D94BBF006D8A34 /* NewPatientViewController.swift in Sources */,
 				0586FDF324D9451A0001AE8D /* UIColour+.swift in Sources */,
 				05110ADF24D7E62500C604C3 /* HomeViewController.swift in Sources */,
-				05110AF124D8091800C604C3 /* PatientCollectionViewDataSource.swift in Sources */,
+				05110AF124D8091800C604C3 /* HomeDataSource.swift in Sources */,
 				05C5236624DA8C68006D8A34 /* PatientNameCell.swift in Sources */,
 				05C5236C24DAA933006D8A34 /* PastMedicalHistory.swift in Sources */,
 				05C5236A24DAA1F7006D8A34 /* PhysicalExamination.swift in Sources */,
