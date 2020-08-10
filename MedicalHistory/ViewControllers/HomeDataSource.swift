@@ -27,6 +27,10 @@ class HomeDataSource: NSObject, UICollectionViewDataSource {
         self.patients = patients
     }
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return HomeSection.allCases.count
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return patients.count
     }
@@ -57,4 +61,9 @@ extension HomeDataSource: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 55)
     }
+}
+
+private enum HomeSection: CaseIterable {
+    case folders
+    case patientList
 }
