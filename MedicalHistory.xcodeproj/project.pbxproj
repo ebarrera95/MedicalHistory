@@ -20,6 +20,7 @@
 		05110AEF24D8047500C604C3 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05110AEE24D8047500C604C3 /* Patient.swift */; };
 		05110AF124D8091800C604C3 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05110AF024D8091800C604C3 /* HomeDataSource.swift */; };
 		05110AF324D80FDB00C604C3 /* PatientsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05110AF224D80FDB00C604C3 /* PatientsHeader.swift */; };
+		0551883824E13FCE006D2252 /* HomeFolderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0551883724E13FCE006D2252 /* HomeFolderCell.swift */; };
 		0586FDF324D9451A0001AE8D /* UIColour+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0586FDF224D9451A0001AE8D /* UIColour+.swift */; };
 		05C5236224D94B1A006D8A34 /* NewPatientCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5236124D94B1A006D8A34 /* NewPatientCoordinator.swift */; };
 		05C5236424D94BBF006D8A34 /* NewPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5236324D94BBF006D8A34 /* NewPatientViewController.swift */; };
@@ -48,6 +49,7 @@
 		05110AEE24D8047500C604C3 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		05110AF024D8091800C604C3 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		05110AF224D80FDB00C604C3 /* PatientsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsHeader.swift; sourceTree = "<group>"; };
+		0551883724E13FCE006D2252 /* HomeFolderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFolderCell.swift; sourceTree = "<group>"; };
 		0586FDF224D9451A0001AE8D /* UIColour+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColour+.swift"; sourceTree = "<group>"; };
 		05C5236124D94B1A006D8A34 /* NewPatientCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPatientCoordinator.swift; sourceTree = "<group>"; };
 		05C5236324D94BBF006D8A34 /* NewPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPatientViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				05110AEC24D8043700C604C3 /* PatientCell.swift */,
+				0551883724E13FCE006D2252 /* HomeFolderCell.swift */,
 				05C5236524DA8C68006D8A34 /* PatientNameCell.swift */,
 				05110AF224D80FDB00C604C3 /* PatientsHeader.swift */,
 			);
@@ -226,6 +229,7 @@
 				05110AF324D80FDB00C604C3 /* PatientsHeader.swift in Sources */,
 				05110ACB24D7E2A200C604C3 /* AppDelegate.swift in Sources */,
 				05110ACD24D7E2A200C604C3 /* SceneDelegate.swift in Sources */,
+				0551883824E13FCE006D2252 /* HomeFolderCell.swift in Sources */,
 				05C5237024DD4A08006D8A34 /* PatientReevaluation.swift in Sources */,
 				05C5237224DD4A9F006D8A34 /* Disciple.swift in Sources */,
 				05C5236224D94B1A006D8A34 /* NewPatientCoordinator.swift in Sources */,
