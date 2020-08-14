@@ -16,8 +16,14 @@ class HomeFolderCell: UICollectionViewCell {
             guard let homeFolder = self.homeFolder else { fatalError() }
             
             iconView.image = homeFolder.image
-            counterLabel.attributedText = NSAttributedString(string: "\(homeFolder.counter)", attributes: nil)
-            title.attributedText = NSAttributedString(string: homeFolder.name, attributes: nil)
+            let counterLabelAttributes: [NSAttributedString.Key: Any] = [
+                .font: UIFont.systemFont(ofSize: 32, weight: .medium)
+            ]
+            counterLabel.attributedText = NSAttributedString(string: "\(homeFolder.counter)", attributes: counterLabelAttributes)
+            let titleLabelAttributes: [NSAttributedString.Key: Any] = [
+                .font: UIFont.systemFont(ofSize: 20, weight: .bold)
+            ]
+            title.attributedText = NSAttributedString(string: homeFolder.foldersName, attributes: titleLabelAttributes)
         }
     }
     
@@ -60,7 +66,34 @@ class HomeFolderCell: UICollectionViewCell {
 }
 
 struct HomeFolder {
-    let name: String
-    let image: UIImage
-    let counter: Int
+    let foldersName: String
+    let symbol: SFSymbol
+    
+    var image: UIImage {
+        return UIImage(systemName: symbol.symbolName, withConfiguration: symbol.configuration)!.withTintColor(symbol.colour, renderingMode: .alwaysOriginal)
+    }
+    
+    var counter: Int = 0
+    
+    mutating func increaseCounter(in value: Int) { 
+        counter = counter + value
+    }
+    
+    mutating func decreaseCounter(in value: Int) {
+        counter = counter - value
+    }
+}
+
+struct SFSymbol {
+    let symbolName: String
+    
+    let colour: UIColor
+    let size: CGFloat
+    
+    let weight: UIImage.SymbolWeight
+    let scale: UIImage.SymbolScale
+    
+    var configuration: UIImage.SymbolConfiguration {
+        return UIImage.SymbolConfiguration(pointSize: size, weight: weight, scale: scale)
+    }
 }
