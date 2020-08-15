@@ -12,22 +12,37 @@ class MultipleOptionsCell: UICollectionViewCell {
     
     static var reuseIdentifier = "MultipleOptions"
     
-    
     var options: [String]? {
         didSet {
-            
+            pickerView.delegate = self
+            pickerView.dataSource = self
+            valueTextField.inputView = pickerView
+        }
+    }
+    var title: String? {
+        didSet {
+            guard let title = self.title else { fatalError() }
+            titleLabel.attributedText = NSAttributedString(string: title)
         }
     }
     
-    private let title = UILabel()
-    private let value = UITextField()
+    private let titleLabel = UILabel()
+    private let valueTextField: UITextField = {
+        let textField = UITextField()
+        textField.attributedPlaceholder = NSAttributedString(string: "Not Set")
+        textField.textAlignment = .right
+        textField.tintColor = .clear
+        return textField
+    }()
     
     private let pickerView = UIPickerView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.addSubview(title)
-        self.addSubview(value)
+        self.addSubview(titleLabel)
+        self.addSubview(valueTextField)
+        backgroundColor = .tertiarySystemGroupedBackground
+        setConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -35,14 +50,43 @@ class MultipleOptionsCell: UICollectionViewCell {
     }
     
     private func setConstraints() {
-        title.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        valueTextField.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            title.centerYAnchor.constraint(equalTo: centerYAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             
-            value.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
-            value.centerYAnchor.constraint(equalTo: centerYAnchor)
+            valueTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            valueTextField.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
+    }
+}
+
+extension MultipleOptionsCell: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        guard let options = self.options else { fatalError() }
+        return options.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return contentView.bounds.height
+    }
+}
+
+extension MultipleOptionsCell: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        guard let options = self.options else { fatalError() }
+        let titleInPickerComponent = options[row]
+        let attributedTitle = NSAttributedString(string: titleInPickerComponent)
+        return attributedTitle
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        valueTextField.attributedText = NSAttributedString(string: options![row])
     }
 }

@@ -58,6 +58,12 @@ class NewPatientDataSource: NSObject, UICollectionViewDataSource {
             guard let shortTextFieldCell = cell as? ShortTextFieldCell else { fatalError() }
             shortTextFieldCell.title = field.name
             return shortTextFieldCell
+        case .set(let options):
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MultipleOptionsCell.reuseIdentifier, for: indexPath)
+            guard let multipleOptionCell = cell as? MultipleOptionsCell else { fatalError() }
+            multipleOptionCell.title = field.name
+            multipleOptionCell.options = options
+            return multipleOptionCell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShortTextFieldCell.reuseIdentifier, for: indexPath)
             guard let shortTextFieldCell = cell as? ShortTextFieldCell else { fatalError() }
