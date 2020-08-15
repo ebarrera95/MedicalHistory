@@ -21,6 +21,14 @@ class DatePickerCell: UICollectionViewCell {
         }
     }
     
+    var title: String? {
+        didSet {
+            guard let title = self.title else { fatalError() }
+            titleLabel.attributedText = NSAttributedString(string: title)
+        }
+    }
+
+    
     private let titleLabel = UILabel()
     private let valueTextField: UITextField = {
         let textField = UITextField()

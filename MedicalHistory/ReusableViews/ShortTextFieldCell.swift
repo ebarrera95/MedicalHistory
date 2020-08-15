@@ -14,7 +14,10 @@ class ShortTextFieldCell: UICollectionViewCell {
     var title: String? {
         didSet {
             guard let title = self.title else { fatalError() }
-            textField.attributedPlaceholder = NSAttributedString(string: title, attributes: nil)
+            let attributes: [NSAttributedString.Key: Any] = [
+                .foregroundColor: UIColor.gray
+            ]
+            textField.attributedPlaceholder = NSAttributedString(string: title, attributes: attributes)
         }
     }
     
@@ -32,6 +35,6 @@ class ShortTextFieldCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        textField.frame = self.bounds
+        textField.frame = self.bounds.inset(by: .init(top: 0, left: 8, bottom: 0, right: 8))
     }
 }

@@ -69,6 +69,7 @@ class NewPatientDataSource: NSObject, UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DatePickerCell.reuseIdentifier, for: indexPath)
             guard let datePickerCell = cell as? DatePickerCell else { fatalError() }
             datePickerCell.date = date
+            datePickerCell.title = field.name
             return datePickerCell
         case .longText:
             fatalError()

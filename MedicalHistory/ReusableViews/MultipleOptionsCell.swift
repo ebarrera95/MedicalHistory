@@ -29,7 +29,10 @@ class MultipleOptionsCell: UICollectionViewCell {
     private let titleLabel = UILabel()
     private let valueTextField: UITextField = {
         let textField = UITextField()
-        textField.attributedPlaceholder = NSAttributedString(string: "Not Set")
+        let attributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.gray
+        ]
+        textField.attributedPlaceholder = NSAttributedString(string: "Not Set", attributes: attributes)
         textField.textAlignment = .right
         textField.tintColor = .clear
         return textField
