@@ -36,6 +36,7 @@ class NewPatientDataSource: NSObject, UICollectionViewDataSource {
             collectionView?.backgroundColor = .white
             collectionView?.register(ShortTextFieldCell.self, forCellWithReuseIdentifier: ShortTextFieldCell.reuseIdentifier)
             collectionView?.register(MultipleOptionsCell.self, forCellWithReuseIdentifier: MultipleOptionsCell.reuseIdentifier)
+            collectionView?.register(DatePickerCell.self, forCellWithReuseIdentifier: DatePickerCell.reuseIdentifier)
             collectionView?.dataSource = self
             collectionView?.delegate = self
         }
@@ -64,11 +65,13 @@ class NewPatientDataSource: NSObject, UICollectionViewDataSource {
             multipleOptionCell.title = field.name
             multipleOptionCell.options = options
             return multipleOptionCell
-        default:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShortTextFieldCell.reuseIdentifier, for: indexPath)
-            guard let shortTextFieldCell = cell as? ShortTextFieldCell else { fatalError() }
-            shortTextFieldCell.title = field.name
-            return shortTextFieldCell
+        case .date(let date):
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DatePickerCell.reuseIdentifier, for: indexPath)
+            guard let datePickerCell = cell as? DatePickerCell else { fatalError() }
+            datePickerCell.date = date
+            return datePickerCell
+        case .longText:
+            fatalError()
         }
     }
 }

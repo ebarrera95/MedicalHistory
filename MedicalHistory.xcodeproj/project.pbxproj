@@ -32,6 +32,7 @@
 		05C5237224DD4A9F006D8A34 /* Disciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5237124DD4A9F006D8A34 /* Disciple.swift */; };
 		05EE073E24E65A52009B0C99 /* ShortTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EE073D24E65A52009B0C99 /* ShortTextFieldCell.swift */; };
 		05EE074024E66A04009B0C99 /* MultipleOptionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EE073F24E66A04009B0C99 /* MultipleOptionsCell.swift */; };
+		05EE074224E7DA8C009B0C99 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EE074124E7DA8C009B0C99 /* DatePickerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		05C5237124DD4A9F006D8A34 /* Disciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disciple.swift; sourceTree = "<group>"; };
 		05EE073D24E65A52009B0C99 /* ShortTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortTextFieldCell.swift; sourceTree = "<group>"; };
 		05EE073F24E66A04009B0C99 /* MultipleOptionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleOptionsCell.swift; sourceTree = "<group>"; };
+		05EE074124E7DA8C009B0C99 /* DatePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				0551883724E13FCE006D2252 /* HomeFolderCell.swift */,
 				05EE073D24E65A52009B0C99 /* ShortTextFieldCell.swift */,
 				05EE073F24E66A04009B0C99 /* MultipleOptionsCell.swift */,
+				05EE074124E7DA8C009B0C99 /* DatePickerCell.swift */,
 				05110AF224D80FDB00C604C3 /* PatientsHeader.swift */,
 			);
 			path = ReusableViews;
@@ -239,6 +242,7 @@
 				05C5236224D94B1A006D8A34 /* NewPatientCoordinator.swift in Sources */,
 				05C5236E24DD4892006D8A34 /* MedicalHistory.swift in Sources */,
 				05EE074024E66A04009B0C99 /* MultipleOptionsCell.swift in Sources */,
+				05EE074224E7DA8C009B0C99 /* DatePickerCell.swift in Sources */,
 				05110AE824D7EC8200C604C3 /* MainCoordinator.swift in Sources */,
 				05110AEF24D8047500C604C3 /* Patient.swift in Sources */,
 				05C5236824DA9142006D8A34 /* NewPatientDataSource.swift in Sources */,
