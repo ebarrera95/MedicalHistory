@@ -22,8 +22,17 @@ class NewPatientDataSource: NSObject, UICollectionViewDataSource {
             .init(name: "Gender", value: nil, type: .set(["Male", "Female"]))
         ]),
         
-        .init(name: "Address", fields: [
-            .init(name: "Address", value: nil, type: .text)
+        .init(name: "Contact Info", fields: [
+            .init(name: "Address", value: nil, type: .text),
+            .init(name: "Phone number", value: nil, type: .text)
+        ]),
+        
+        .init(name: "Principal Carer", fields: [
+        .init(name: "Fist Name", value: nil, type: .text),
+        .init(name: "Middle Name", value: nil, type: .text),
+        .init(name: "Last Name", value: nil, type: .text),
+        
+        .init(name: "Relationship", value: nil, type: .text)
         ]),
         
         .init(name: "Date", fields: [
@@ -37,6 +46,7 @@ class NewPatientDataSource: NSObject, UICollectionViewDataSource {
             collectionView?.register(ShortTextFieldCell.self, forCellWithReuseIdentifier: ShortTextFieldCell.reuseIdentifier)
             collectionView?.register(MultipleOptionsCell.self, forCellWithReuseIdentifier: MultipleOptionsCell.reuseIdentifier)
             collectionView?.register(DatePickerCell.self, forCellWithReuseIdentifier: DatePickerCell.reuseIdentifier)
+            collectionView?.register(ReusableHeaderView.self, forSupplementaryViewOfKind: "Header", withReuseIdentifier: ReusableHeaderView.reuseIdentifier)
             collectionView?.dataSource = self
             collectionView?.delegate = self
         }
@@ -74,6 +84,20 @@ class NewPatientDataSource: NSObject, UICollectionViewDataSource {
             fatalError()
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: "Header", withReuseIdentifier: ReusableHeaderView.reuseIdentifier, for: indexPath)
+            guard let header = reusableView as? ReusableHeaderView else { fatalError() }
+            header.title = NSAttributedString(string: "Principal Carer", attributes: [
+                NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)
+            ])
+            return header
+        default:
+            assert(false, "unexpected element")
+        }
+    }
 }
 
 extension NewPatientDataSource: UICollectionViewDelegateFlowLayout {
@@ -82,11 +106,23 @@ extension NewPatientDataSource: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 44, left: 16, bottom: 0, right: 16)
+        if newPatientForm.sections[section].name == "Principal Carer" {
+            return UIEdgeInsets(top: 4, left: 16, bottom: 22, right: 16)
+        } else {
+            return UIEdgeInsets(top: 22, left: 16, bottom: 22, right: 16)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 2.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        if newPatientForm.sections[section].name == "Principal Carer" {
+           return CGSize(width: collectionView.frame.width, height: 44)
+        } else {
+            return .zero
+        }
     }
 
 }

@@ -41,7 +41,7 @@ class HomeDataSource: NSObject, UICollectionViewDataSource {
             collectionView?.backgroundColor = .white
             collectionView?.register(PatientCell.self, forCellWithReuseIdentifier: PatientCell.reuseIdentifier)
             collectionView?.register(HomeFolderCell.self, forCellWithReuseIdentifier: HomeFolderCell.reuseIdentifier)
-            collectionView?.register(PatientsHeader.self, forSupplementaryViewOfKind: "Header", withReuseIdentifier: PatientsHeader.reuseIdentifier)
+            collectionView?.register(ReusableHeaderView.self, forSupplementaryViewOfKind: "Header", withReuseIdentifier: ReusableHeaderView.reuseIdentifier)
             
             collectionView?.dataSource = self
             collectionView?.delegate = self
@@ -86,7 +86,10 @@ class HomeDataSource: NSObject, UICollectionViewDataSource {
         
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            return collectionView.dequeueReusableSupplementaryView(ofKind: "Header", withReuseIdentifier: PatientsHeader.reuseIdentifier, for: indexPath)
+            let reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: "Header", withReuseIdentifier: ReusableHeaderView.reuseIdentifier, for: indexPath)
+            guard let header = reusableView as? ReusableHeaderView else { fatalError() }
+            header.title = NSAttributedString(string: "Patientes", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 24)])
+            return header
         default:
             assert(false, "unexpected element")
         }

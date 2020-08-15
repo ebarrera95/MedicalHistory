@@ -8,16 +8,17 @@
 
 import UIKit
 
-class PatientsHeader: UICollectionReusableView {
-    static var reuseIdentifier = "PatientsHeader"
+class ReusableHeaderView: UICollectionReusableView {
+    static var reuseIdentifier = "Header"
     
-    private let headerName = "Patients"
+    var title: NSAttributedString? {
+        didSet {
+            guard let title = self.title else { fatalError() }
+            headerMainLabel.attributedText = title
+        }
+    }
     
-    private let headerMainLabel: UILabel = {
-        let label = UILabel()
-        label.attributedText = NSAttributedString(string: "Patients List", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 24)])
-        return label
-    }()
+    private let headerMainLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,7 +27,7 @@ class PatientsHeader: UICollectionReusableView {
         
         NSLayoutConstraint.activate([
             headerMainLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            headerMainLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+            headerMainLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
     
